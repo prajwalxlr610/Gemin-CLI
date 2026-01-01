@@ -5,8 +5,7 @@
 // Import React and ReactDOM for rendering
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-// Quiz app
-import QuizApp from './quiz/QuizApp';
+
 // FIX: Declare XLSX to inform TypeScript that it will be available globally, likely from a script tag.
 declare var XLSX: any;
 
@@ -3912,10 +3911,4 @@ const Baap = () => {
     );
 };
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-const pathname = typeof window !== 'undefined' ? window.location.pathname : '/';
-if (pathname.startsWith('/quiz')) {
-    root.render(<QuizApp />);
-} else {
     root.render(<Baap />);
-}
